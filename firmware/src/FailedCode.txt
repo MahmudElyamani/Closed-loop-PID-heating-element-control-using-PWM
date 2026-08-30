@@ -1,0 +1,54 @@
+
+//PID Control     (Experimental)
+float targetTemp = 20.00; // desired temperature
+float Kp = 1.0;
+float Ki = 1.5;
+float Kd = 2.0;
+float duty;
+float integral = 0;
+float lastError = 0;
+unsigned long lastPIDTime = 0;
+
+
+##################################################################################################3
+
+
+float computePID(float currentTemp) 
+{
+  unsigned long now = millis();
+  float dt = (now - lastPIDTime) / 1000.0; // seconds
+
+  if (dt <= 0) dt = 0.001;
+
+  float error = targetTemp - currentTemp;
+
+  // Proportional
+  float P = Kp * error;
+
+  // Integral
+  if (integral > 100) integral = 100;
+  if (integral < -100) integral = -100;
+  integral += error * dt;
+  float I = Ki * integral;
+
+  // Derivative
+  float derivative = (error - lastError) / dt;
+  float D = Kd * derivative;
+
+  lastError = error;
+  lastPIDTime = now;
+
+  float output = P + I + D;
+
+  // Clamp output to 0–50%
+  if (output > 50) output = 50;
+  if (output < 0) output = 0;
+
+  return output;
+}
+
+
+
+#####################################################################################3
+
+
