@@ -1,0 +1,16 @@
+# Build artifacts
+*.hex
+*.elf
+*.o
+build/
+.pio/
+
+# KiCad backups
+*-bak
+*.bck
+fp-info-cache
+_autosave-*
+
+# OS junk
+.DS_Store
+Thumbs.db
