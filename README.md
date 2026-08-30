@@ -1,6 +1,6 @@
 # Closed-Loop PID Polyimide Heater Controller
 
-A compact 70×40 mm PCB that drives a polyimide (Kapton) film heater with closed-loop PID temperature control, selectable between three preset temperature stages via a single push button.
+A compact 72×42 mm PCB that drives a polyimide (Kapton) film heater with closed-loop PID temperature control, selectable between three preset temperature stages via a single push button.
 
 ![PCB Front](docs/images/PCB_PHYSICAL1.jpeg)
 ![PCB Back](docs/images/PCB_PHYSICAL2.jpeg)
@@ -24,14 +24,14 @@ This project was built to precisely and safely regulate the surface temperature 
 
 | Parameter | Value |
 |---|---|
-| Input power | 24 V, 4 A DC supply |
+| Input power | 24 V, 5 A DC supply |
 | Logic supply | Buck-regulated from 24 V rail down to 5 V for the ATmega328P |
 | Power switching | 2× N-channel MOSFETs in parallel, PWM-gated |
 | Microcontroller | ATmega328P (Arduino-compatible) |
 | Temperature sensing | NTC thermistor (100 kΩ @ 25 °C, β ≈ 3950), voltage-divider with 100 kΩ series resistor |
 | PWM frequency | ~20 kHz (Timer2, Fast PWM mode, prescaler 8, TOP = 99) |
 | User interface | 1× push button, 3× status LEDs, 1× buzzer |
-| Board size | 70 × 40 mm |
+| Board size | 72 × 42 mm |
 
 See [`hardware/README.md`](hardware/README.md) for schematic, PCB layout, and BOM details.
 
@@ -95,7 +95,7 @@ heater-control-pcb/
 2. Fabricate the PCB using the files in [`hardware/gerbers`](hardware/gerbers).
 3. Assemble per the BOM in [`hardware/bom`](hardware/bom).
 4. Flash `firmware/src/main.cpp` to the ATmega328P — see [`firmware/README.md`](firmware/README.md) for details.
-5. Connect a 24 V / 4 A supply and the polyimide heater + thermistor assembly.
+5. Connect a 24 V / 5 A supply and the polyimide heater + thermistor assembly.
 
 ## Gallery
 
@@ -103,12 +103,9 @@ heater-control-pcb/
 
 | | | |
 |---|---|---|
-| ![](docs/images/photo1.jpg) | ![](docs/images/photo2.jpg) | ![](docs/images/photo3.jpg) |
+| ![](docs/images/SCHEMATIC.PNG) | ![](docs/images/PCB_FRONT.PNG) | ![](docs/images/PCB_BACK.PNG) |
 
-## License
-
-*(Choose a license — e.g. MIT for firmware, CERN-OHL-S or TAPR OHL for the hardware — and add it here.)*
 
 ## Author
 
-Built by [Your Name]. Feel free to reach out with questions or suggestions.
+Built by Mahmoud Elyamani. Feel free to reach out with questions or suggestions.
