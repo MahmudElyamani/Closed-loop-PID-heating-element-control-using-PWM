@@ -99,8 +99,6 @@ heater-control-pcb/
 
 ## Gallery
 
-*(Add photos/renders of the assembled board, enclosure, and heater in action here.)*
-
 | | | |
 |---|---|---|
 | ![](docs/images/SCHEMATIC.PNG) | ![](docs/images/PCB_FRONT.PNG) | ![](docs/images/PCB_BACK.PNG) |
