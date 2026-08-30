@@ -3,6 +3,8 @@
 Schematic, PCB layout, and fabrication files for the heater controller board.
 
 ![Schematic_Full](../docs/images/SCHEMATIC.PNG)
+![PCB_FRONT](../docs/images/PCB_FRONT.PNG)
+![PCB_BACK](../docs/images/PCB_BACK.PNG)
 
 ## Board Specs
 
