@@ -2,8 +2,8 @@
 
 A compact 70×40 mm PCB that drives a polyimide (Kapton) film heater with closed-loop PID temperature control, selectable between three preset temperature stages via a single push button.
 
-![PCB Photo](docs/images/pcb-hero.jpg)
-*Replace with a real photo of the assembled board.*
+![PCB Front](docs/images/PCB_PHYSICAL1.jpeg)
+![PCB Back](docs/images/PCB_PHYSICAL2.jpeg)
 
 ## Overview
 
