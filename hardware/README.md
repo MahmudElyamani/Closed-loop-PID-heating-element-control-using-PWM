@@ -2,6 +2,8 @@
 
 Schematic, PCB layout, and fabrication files for the heater controller board.
 
+![Schematic_Full](../docs/images/SCHEMATIC.PNG)
+
 ## Board Specs
 
 | Parameter | Value |
@@ -43,7 +45,6 @@ Splitting the switched current across two MOSFETs in parallel reduces the conduc
 - **`gerbers/`** — fabrication-ready Gerber + drill files (zip per revision, e.g. `heater-controller-rev1-gerbers.zip`).
 - **`bom/`** — bill of materials (CSV/XLSX), ideally with mouser/digikey/lcsc part numbers.
 
-*(Populate these folders with your actual design files — KiCad/Eagle/Altium project, exported Gerbers, BOM, and a schematic PDF. If your design tool has a shareable web view (e.g. KiCad on GitHub renders schematics/PCB natively, or a EasyEDA/Upverter link), link it here too.)*
 
 ## Revision History
 
